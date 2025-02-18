@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Day3-Task</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="style.css">
+        <link rel="stylesheet" href="style1.css">
+        <script src="valid.js"></script>
+        <script src="valid2.js"></script>
+      </head>
+    <body>
+      <div class="header">
+        <a href="#" class="logo">DR.SMILE:)</a>
+        <div class="header-right">
+          <a href="home.html">Home</a>
+          <a href="login.html">Sign in</a>
+          <a href="register.html">Sign up</a>
+          <a href="contact.html">Contact</a>
+        </div>
+      </div>
+      <div class="body">  
+        <div class="container">
+          <div class="content">
+            <div class="left-side">
+              <div class="imgcontainer">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/f/f4/User_Avatar_2.png" alt="Avatar" class="avatar"> <br> 
+                 Already a user?<br> <a href="login.html"> Sign in here </a>  
+              </div>
+            </div>
+            <div class="right-side">
+              <div class="topic-text">Sign up</div>
+              <p id="o3"></p>
+            <form method="post">
+              <div class="input-box">
+                <input type="text" placeholder="First name" id="fname" onfocusout="valname()">
+                <small></small>
+              </div>
+              <div class="input-box">
+                <input type="text" placeholder="Last name" id="lname" onfocusout="valname1()">
+                <small></small>
+              </div>
+              <div class="input-box">
+                <input type="date" placeholder="Date of birth" max="" id="date" >
+              </div>
+              <div class="input-box">
+                <input type="text"  name="address" placeholder="Address">
+              </div>
+              <div>
+                <label for="gender"><b>Gender:</b></label>
+                <input type="radio"  name="gender" value="male" >Male
+                <input type="radio"  name="gender" value="female" >Female  
+                <input type="radio"  name="gender" value="other" >Others 
+              </div>
+              <div class="input-box">
+                <input type="text"  name="pnumber" id="phonen" onfocusout="phone()" maxlength="10" placeholder="Mobile number" >
+                <small></small>
+              </div>
+              <div class="input-box">
+                <input type="text"  name="email" placeholder="Email" id="email" onfocusout="valid_mail()" >
+                <small></small>
+              </div>
+              <div class="input-box">
+                <select id="state" class="classic">
+                  <option value="" selected="selected">Select your state</option>
+                </select>
+              </div>
+              <div class="input-box">
+                <select id="district" class="classic">
+                  <option value="" selected="selected">Select your distrct</option>
+                </select>
+              </div>
+              <div class="input-box">
+                <input type="text"  placeholder="Username" id="uname" onfocusout="valid_user()" >
+                <small></small>
+              </div>
+              <div class="input-box">
+                <input type="password"  id="pass" onfocusout="pass_valid()" placeholder="Password" > 
+                <small></small>
+              </div>
+              <div class="input-box">
+                <input type="password"   placeholder="Confirm password" id="pass1" onfocusout="checkpass()" >
+                <small></small> 
+              </div>
+                <input type="button" id="check" onclick="validate()" class="button1" value="Sign up" >
+              </div>
+            </form>
+          </div>
+          </div>
+        </div>
+      </div>
+      <footer>
+        <div class="row">
+          <ul>
+          <li><a href="contact.html">Contact us</a></li>
+          <li><a href="#">Privacy policy</a></li>
+          <li><a href="#">Terms & conditions</a></li>
+          </ul>
+          </div>
+          <div class="row">
+          Dr.SMILE Copyright © 2023 Dr.SMILE - All rights reserved || Designed By: AJ 
+          </div>
+          </div>
+         </p>
+        </div>
+     </footer>
+     <script>
+      var todayDate = new Date();
+      var month =12;
+      var year = todayDate.getUTCFullYear() - 18;
+      var tdate =31;
+      var maxDate = year + "-" + month + "-" + tdate;
+      document.getElementById("date").setAttribute("max", maxDate);
+      console.log(maxDate);
+  </script>
+   </body>
+
+</html>
